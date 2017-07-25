@@ -1,0 +1,27 @@
+hash: fb9ec49617b51b06be897bad1a0253d66e527f697b8585f8586e7d43fdcaabd2
+updated: 2017-07-22T15:26:27.633138228+09:00
+imports:
+- name: github.com/GoogleCloudPlatform/google-cloud-go
+  version: a5913b3f7deecba45e98ff33cefbac4fd204ddd7
+  subpackages:
+  - compute/metadata
+- name: github.com/inconshreveable/mousetrap
+  version: 76626ae9c91c4f2a10f34cad8ce83ea42c93bb75
+- name: github.com/sirupsen/logrus
+  version: a3f95b5c423586578a4e099b11a46c2479628cac
+- name: github.com/spf13/cobra
+  version: 715f41bd7a70b5111f898b71ab484da52ee6266d
+- name: github.com/spf13/pflag
+  version: e57e3eeb33f795204c1ca35f56c44f83227c6e66
+- name: golang.org/x/net
+  version: ab5485076ff3407ad2d02db054635913f017b0ed
+  subpackages:
+  - context
+  - context/ctxhttp
+- name: golang.org/x/sys
+  version: c4489faa6e5ab84c0ef40d6ee878f7a030281f0f
+  subpackages:
+  - unix
+- name: gopkg.in/yaml.v2
+  version: 25c4ec802a7d637f88d584ab26798e94ad14c13b
+testImports: []

@@ -1,0 +1,11 @@
+# Copyright (C) 2017 Kazumasa Kohtaka <kkohtaka@gmail.com> All right reserved
+# This file is available under the MIT license.
+
+-
+  name: Consul config file
+  template: ./examples/consul-config.json.tmpl
+  backend: file
+  source: ./examples/variables.yml
+  destination: ./output/consul-config.json
+  check_command: consul validate
+  reload_command: consul reload
