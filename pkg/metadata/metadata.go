@@ -8,5 +8,5 @@ type UpdateHandler func(key string, data []byte) error
 
 // Monitor monitors update on a metadata specified by a key.
 type Monitor interface {
-	MonitorUpdate(key string, handler UpdateHandler)
+	MonitorUpdate(key string, handler UpdateHandler) error
 }

@@ -173,6 +173,15 @@ func generateMetadataUpdateHandler(config types.Config) (metadata.UpdateHandler,
 			return err
 		}
 
+		err = os.Remove(config.Destination)
+		if err != nil {
+			log.
+				WithError(err).
+				WithField("path", config.Destination).
+				Error("Failed to remove a file at a path")
+			return err
+		}
+
 		err = os.Link(tmpFile.Name(), config.Destination)
 		if err != nil {
 			log.

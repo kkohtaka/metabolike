@@ -17,8 +17,8 @@ func NewGCEMonitor() *GCEMonitor {
 }
 
 // MonitorUpdate registers a handler which will be fired on metadata update.
-func (m GCEMonitor) MonitorUpdate(key string, handler UpdateHandler) {
-	gcemetadata.Subscribe(key, func(v string, ok bool) error {
+func (m GCEMonitor) MonitorUpdate(key string, handler UpdateHandler) error {
+	return gcemetadata.Subscribe(key, func(v string, ok bool) error {
 		if ok {
 			err := handler(key, []byte(v))
 			if err != nil {
